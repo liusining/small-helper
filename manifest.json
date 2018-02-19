@@ -1,8 +1,14 @@
 {
   "manifest_version": 2,
-  "name": "ONE helper",
+  "name": "Small helper",
   "version": "0.1",
+  "minimum_chrome_version": "29",
   "browser_action": {
     "default_popup": "popup/popup.html"
-  }
+  },
+  "content_scripts": [{
+    "matches": ["https://big.one/accounts"],
+    "js": ["content.js"]
+  }],
+  "permissions": ["tabs"]
 }
