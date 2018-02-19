@@ -23,6 +23,12 @@ let dataPromise = new Promise(function (resolve, reject) {
 
 dataPromise.then(function ([labels, data]) {
 
+    let sum = data.reduce((accum, current) => accum + current);
+
+    for (let i = 0; i < labels.length; i++) {
+      labels[i] += ` ${(data[i] / sum * 100).toFixed(1)}%`
+    }
+
     let colors = [];
 
     for (let colorsLeft = data.length; colorsLeft > 0; colorsLeft -= DEFAULT_COLORS.length) {
