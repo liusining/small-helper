@@ -8,7 +8,7 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
 
         for (let el of assetEls) {
             if (el.className.includes('zero')) {
-                break;
+                continue;
             }
             data.push(parseFloat(el.innerText));
             let label = el.parentElement.parentElement.parentElement.
