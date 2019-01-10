@@ -26,7 +26,7 @@ let dataPromise = new Promise(function (resolve, reject) {
     });
 });
 
-dataPromise.then(function ([labels, data]) {
+dataPromise.then(function ([labels, data]) { // resolve results go here
 
     let sum = data.reduce((accum, current) => accum + current);
 
@@ -56,7 +56,7 @@ dataPromise.then(function ([labels, data]) {
             responsive: true
         }
     });
-}, function (reason) {
+}, function (reason) { // reject result jump to here
     let body = document.querySelector('body'),
         div = document.createElement('div'),
         header = document.createElement('h3'),
