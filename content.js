@@ -10,7 +10,9 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
             if (el.className.includes('zero')) {
                 continue;
             }
-            data.push(parseFloat(el.innerText));
+            amount = parseFloat(el.innerText);
+            if (amount < 1) { continue; }
+            data.push(amount);
             let label = el.parentElement.parentElement.parentElement.
             previousElementSibling.lastElementChild.firstChild.textContent.trim();
             labels.push(label);
