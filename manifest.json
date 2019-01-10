@@ -1,6 +1,8 @@
 {
   "manifest_version": 2,
-  "name": "Small helper",
+  "name": "Asset Allocation Calculator for BigONE",
+  "short_name": "配置计算器 for B1",
+  "description": "Calculate percentages of your blockchain assets, which are deposited in BigONE",
   "version": "0.4",
   "minimum_chrome_version": "29",
   "browser_action": {
