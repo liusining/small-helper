@@ -7,8 +7,13 @@
     "default_popup": "popup/popup.html"
   },
   "content_scripts": [{
-    "matches": ["https://big.one/accounts"],
+    "matches": ["https://big.one/", "https://big.one/*", "https://b1.run/", "https://b1.run/*"],
     "js": ["content.js"]
   }],
-  "permissions": ["tabs"]
+  "permissions": ["tabs"],
+  "icons": {
+    "16": "icons/small-helper-16.png",
+    "48": "icons/small-helper-48.png",
+    "128": "icons/small-helper-128.png"
+  }
 }
